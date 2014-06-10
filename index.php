@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="/js/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="/js/ion.rangeSlider.min.js"></script>
 	<script type="text/javascript" src="/js/charge.js"></script>
-    <script type="text/javascript">
+	<script type="text/javascript">
 		var WebserviceID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 		var DefaultOperator = 'MTN';
 		var DefaultChargeKind = 'PIN';
