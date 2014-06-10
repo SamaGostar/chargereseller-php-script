@@ -26,18 +26,19 @@
 					$type = '';
 					if ($result['Type'] == 'MCI') {
 						$type = 'همراه اول';
-					} else if ($result['Type'] == 'MTN') {
+					} elseif ($result['Type'] == 'MTN') {
 						$type = 'ایرانسل';
-					} else if ($result['Type'] == 'RTL') {
+					} elseif ($result['Type'] == 'RTL') {
 						$type = 'رایتل';
-					} else if ($result['Type'] == 'TAL') {
+					} elseif ($result['Type'] == 'TAL') {
 						$type = 'تالیا';
 					}
+					
 					if (array_key_exists('Serial', $result)) {
 						$registerPinCode = '';
 						if (in_array($result['Type'], array('MCI', 'TAL'))) {
 							$registerPinCode = '#رمزشارژ#*140*';
-						} else if (in_array($result['Type'], array('MTN', 'RTL'))) {
+						} elseif (in_array($result['Type'], array('MTN', 'RTL'))) {
 							$registerPinCode = '#رمزشارژ*141*';
 						}
 			?>
@@ -85,7 +86,9 @@
 							</table>
 							<a class="mainpage" href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">صفحه اصلی فروشگاه</a>
 						</div>
-			<?php   } else { ?>
+			<?php
+					} else {
+			?>
 						<div id="left">
 							<div class="success topup"></div>
 							<div id="description"><p>به زودی خط شما به صورت اتوماتیک شارژ می شود.</p></div>
@@ -122,8 +125,10 @@
 							</table>
 							<a class="mainpage" href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">صفحه اصلی فروشگاه</a>
 						</div>
-			<?php	}
-				} else { ?>
+			<?php	
+					}
+				} else {
+			?>
 					<div class="failed">
 						<div class="logo"></div>
 						<div class="explanation">
