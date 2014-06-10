@@ -1,14 +1,15 @@
+<?php include 'config.php';?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-	<meta name="description" content="شارژ آسان تلفن همراه" />
-	<meta name="keywords" content="شارژ آسان تلفن همراه,شارژ موبایل, فروش شارژ,شارژ ایرانسل,شارژ همراه اول, رایتل,تالیا,کارت شارژ,شارژ مستقیم" />
+	<meta name="description" content="<?php echo $description; ?>" />
+	<meta name="keywords" content="<?php echo $keywords; ?>" />
 	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
 	<link rel="stylesheet" type="text/css" href="/css/jquery.qtip.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/help.css" />
-	<title>فروشگاه شارژ</title>
+	<title><?php echo $title; ?></title>
 </head>
 <body>
 	<div class="bgs">
