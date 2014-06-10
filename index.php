@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="description" content="شارژ آسان تلفن همراه" />
 	<meta name="keywords" content="شارژ آسان تلفن همراه,شارژ موبایل, فروش شارژ,شارژ ایرانسل,شارژ همراه اول, رایتل,تالیا,کارت شارژ,شارژ مستقیم" />
 	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
