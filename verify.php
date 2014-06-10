@@ -8,8 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="/css/jquery.qtip.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/help.css" />
-	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript" src="/js/charge.js"></script>
 	<title>فروشگاه شارژ</title>
 </head>
 <body>
@@ -157,5 +155,7 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="/js/charge.js"></script>
 </body>
 </html>
