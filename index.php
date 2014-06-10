@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="description" content="شارژ آسان تلفن همراه" />
 	<meta name="keywords" content="شارژ آسان تلفن همراه,شارژ موبایل, فروش شارژ,شارژ ایرانسل,شارژ همراه اول, رایتل,تالیا,کارت شارژ,شارژ مستقیم" />
 	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
@@ -10,15 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="/css/ion.rangeSlider.skinNice.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/help.css" />
-	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.qtip.min.js"></script>
-	<script type="text/javascript" src="/js/ion.rangeSlider.min.js"></script>
-	<script type="text/javascript" src="/js/charge.js"></script>
-	<script type="text/javascript">
-		var WebserviceID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
-		var DefaultOperator = 'MTN';
-		var DefaultChargeKind = 'PIN';
-	</script>
 	<title>فروشگاه شارژ</title>
 </head>
 <body>
@@ -109,5 +100,14 @@
 			<div class="clear"></div>
 		</div>
 	</div>
+	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="/js/ion.rangeSlider.min.js"></script>
+	<script type="text/javascript" src="/js/charge.js"></script>
+	<script type="text/javascript">
+		var WebserviceID = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
+		var DefaultOperator = 'MTN';
+		var DefaultChargeKind = 'PIN';
+	</script>
 </body>
 </html>
