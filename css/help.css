@@ -1,0 +1,7 @@
+.helpModalClass {
+	max-width: 800px!important;
+}
+.qtip-content {
+	max-height: 500px;
+	overflow: auto !important;
+}
