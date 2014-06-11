@@ -157,6 +157,12 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.qtip.min.js"></script>
 	<script type="text/javascript" src="/js/charge.js"></script>
+	<script type="text/javascript">
+		var WebserviceID = <?php echo '"' . $config['webserviceID'] . '"'; ?>;
+		var DefaultOperator = <?php echo '"' . $config['defaultOperator'] . '"'; ?>;
+		var DefaultChargeKind = <?php echo '"' . $config['defaultChargeKind'] . '"'; ?>;
+	</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+﻿jQuery(document).ready(function ($) {
 	var DefaultOperatorPhone = '';
 	var ChargeKindText = '';
 	
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
 		} else {
 			action = 'Topup';
 		}
-		$('form#chargeform').attr('action', 'http://www.chargereseller.com/services/EasyCharge/' + action);
+		$('form#chargeform').attr('action', 'http://chargereseller.com/services/EasyCharge/' + action);
 		checkForm();
 		if (sendForm) {
 			$('form#chargeform').submit();
@@ -138,30 +138,34 @@ jQuery(document).ready(function ($) {
 		}
 		$('input#dataAmount').val($(aditionalFind).val());
 	}), 500);
-		
-	$("#dataAmountTemp").ionRangeSlider({
-		values: [1000, 2000, 5000, 10000, 20000],
-		type: 'single',
-		postfix: " تومان",
-		prettify: false,
-		from: 1,
-		onLoad: function(obj) {
-			$('#dataAmountTemp').val(2000);
-		},
-		onChange: function(obj) {
-			$('#dataAmountTemp').val(obj.fromValue);
-		},
-	});
 	
-	$("#dataAmountTopUpMTNTemp").ionRangeSlider({
-		min: 500,
-		max: 50000,
-		type: 'single',
-		postfix: " تومان",
-		prettify: false,
-		step: 500,
-		from: 500,
-	});
+	if ($("#dataAmountTemp").length){
+		$("#dataAmountTemp").ionRangeSlider({
+			values: [1000, 2000, 5000, 10000, 20000],
+			type: 'single',
+			postfix: " تومان",
+			prettify: false,
+			from: 1,
+			onLoad: function(obj) {
+				$('#dataAmountTemp').val(2000);
+			},
+			onChange: function(obj) {
+				$('#dataAmountTemp').val(obj.fromValue);
+			},
+		});
+	}
+	
+	if ($("#dataAmountTopUpMTNTemp").length){
+		$("#dataAmountTopUpMTNTemp").ionRangeSlider({
+			min: 500,
+			max: 50000,
+			type: 'single',
+			postfix: " تومان",
+			prettify: false,
+			step: 500,
+			from: 500,
+		});
+	}
 		
 	$('.help').qtip({
 		content: {
