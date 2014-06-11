@@ -12,7 +12,7 @@
 	<title><?php echo $config['title']; ?></title>
 </head>
 <body>
-	<div class="bgs">
+	<div class="bgs result">
 		<div class="menu">
 			<span class="support">پشتیبانی</span>
 			<span class="help">راهنما</span>
@@ -32,7 +32,6 @@
 					} elseif ($result['Type'] == 'TAL') {
 						$type = 'تالیا';
 					}
-					
 					if (array_key_exists('Serial', $result)) {
 						$registerPinCode = '';
 						if (in_array($result['Type'], array('MCI', 'TAL'))) {
@@ -41,10 +40,6 @@
 							$registerPinCode = '#رمزشارژ*141*';
 						}
 			?>
-						<div id="left">
-							<div class="success pin"></div>
-							<div id="description"><p>اکنون با وارد کردن کد شارژ از طریق صفحه کلید گوشی، تلفن همراه خود را شارژ نمایید.</p></div>
-						</div>
 						<div id="content" style="margin: 50px auto!important;">
 							<p>از خرید شما متشکریم.</p>
 							<table>
@@ -85,13 +80,9 @@
 							</table>
 							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						</div>
-			<?php
+			<?php  
 					} else {
 			?>
-						<div id="left">
-							<div class="success topup"></div>
-							<div id="description"><p>به زودی خط شما به صورت اتوماتیک شارژ می شود.</p></div>
-						</div>
 						<div id="content" style="margin: 50px auto!important;">
 							<p>از خرید شما متشکریم.</p>
 							<table>
@@ -149,7 +140,7 @@
 						</div>
 						<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						<div class="clear"></div>
-					</div>	
+					</div>
 			<?php
 				}
 			?>

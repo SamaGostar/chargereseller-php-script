@@ -213,16 +213,4 @@
 			at: 'bottom center', // at the bottom right of...
 		}
 	});
-	$('div#logo').qtip({
-	   content: 'جهت تغییر نوع شارژ کلیک نمایید.',
-		style:
-		{
-			classes: 'qtip-red qtip-rounded qtip-shadow',
-		},
-		position:
-		{
-			my: 'bottom center',  // Position my top left...
-			at: 'top center', // at the bottom right of...
-		}
-	});
 });

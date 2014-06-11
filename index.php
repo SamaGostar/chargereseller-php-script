@@ -19,6 +19,7 @@
 			<span class="support">پشتیبانی</span>
 			<span class="help">راهنما</span>
 		</div>
+		<div id="logo" class="ChangeType"></div>
 		<div class="container">
 			<div class="operators">
 				<div data-type="MTN" class="operator MTN"><i></i></div>
@@ -26,12 +27,8 @@
 				<div data-type="RTL" class="operator RTL"><i></i></div>
 				<div data-type="TAL" class="operator TAL"><i></i></div>
 			</div>
-			<div id="left">
-				<div id="logo" class="ChangeType"></div>
-				<div id="desc"><h1></h1><p></p></div>
-			</div>
 			<div id="content">
-				<form accept-charset="utf-8" method="post" id="chargeform" action="http://www.chargereseller.com/services/EasyCharge/">
+				<form accept-charset="utf-8" method="post" id="chargeform" action="http://chargereseller.com/services/EasyCharge/">
 					<fieldset>
 						<div class="input text required account">
 							<input id="dataAccountTemp" class="input-large" type="text" value="" maxlength="11" name="data[AccountTemp]">
@@ -79,7 +76,7 @@
 							</ul>
 						</div>
 						<input type="hidden" id="dataWebserviceId" name="data[WebserviceId]">
-						<input type="hidden" id="dataRedirectUrl" name="data[RedirectUrl]" value="<?php echo $root; ?>">
+						<input type="hidden" id="dataRedirectUrl" value="<?php echo $root; ?>" name="data[RedirectUrl]">
 						<input type="hidden" id="dataChargeKind" name="data[ChargeKind]">
 						<input type="hidden" id="dataAccount" name="data[Account]">
 						<input type="hidden" id="dataAmount" name="data[Amount]">
