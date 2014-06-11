@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+﻿jQuery(document).ready(function ($) {
 	var DefaultOperatorPhone = '';
 	var ChargeKindText = '';
 	
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
 		} else {
 			action = 'Topup';
 		}
-		$('form#chargeform').attr('action', 'http://www.chargereseller.com/services/EasyCharge/' + action);
+		$('form#chargeform').attr('action', 'http://chargereseller.com/services/EasyCharge/' + action);
 		checkForm();
 		if (sendForm) {
 			$('form#chargeform').submit();

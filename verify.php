@@ -32,7 +32,6 @@
 					} elseif ($result['Type'] == 'TAL') {
 						$type = 'تالیا';
 					}
-					
 					if (array_key_exists('Serial', $result)) {
 						$registerPinCode = '';
 						if (in_array($result['Type'], array('MCI', 'TAL'))) {
@@ -85,7 +84,7 @@
 							</table>
 							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						</div>
-			<?php
+			<?php  
 					} else {
 			?>
 						<div id="left">
@@ -149,7 +148,7 @@
 						</div>
 						<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						<div class="clear"></div>
-					</div>	
+					</div>
 			<?php
 				}
 			?>
