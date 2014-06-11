@@ -1,15 +1,15 @@
-<?php include 'config.php';?>
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-	<meta name="description" content="<?php echo $description; ?>" />
-	<meta name="keywords" content="<?php echo $keywords; ?>" />
+	<meta name="description" content="<?php echo $config['description']; ?>" />
+	<meta name="keywords" content="<?php echo $config['keywords']; ?>" />
 	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
 	<link rel="stylesheet" type="text/css" href="/css/jquery.qtip.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/help.css" />
-	<title><?php echo $title; ?></title>
+	<title><?php echo $config['title']; ?></title>
 </head>
 <body>
 	<div class="bgs">
@@ -83,7 +83,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<a class="mainpage" href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">صفحه اصلی فروشگاه</a>
+							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						</div>
 			<?php
 					} else {
@@ -122,7 +122,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<a class="mainpage" href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">صفحه اصلی فروشگاه</a>
+							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						</div>
 			<?php	
 					}
@@ -147,7 +147,7 @@
 							?>
 							<p>چنانچه وجه از حساب شما کسر شده است، طی 72 ساعت کاری آینده از طرف بانک وجه به حساب شما باز می گردد.</p>
 						</div>
-						<a class="mainpage" href="<?php echo $_SERVER['SCRIPT_NAME']; ?>">صفحه اصلی فروشگاه</a>
+						<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
 						<div class="clear"></div>
 					</div>	
 			<?php

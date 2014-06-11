@@ -1,17 +1,17 @@
-<?php include 'config.php';?>
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-	<meta name="description" content="<?php echo $description; ?>" />
-	<meta name="keywords" content="<?php echo $keywords; ?>" />
+	<meta name="description" content="<?php echo $config['description']; ?>" />
+	<meta name="keywords" content="<?php echo $config['keywords']; ?>" />
 	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
 	<link rel="stylesheet" type="text/css" href="/css/jquery.qtip.css" />
 	<link rel="stylesheet" type="text/css" href="/css/ion.rangeSlider.css" />
 	<link rel="stylesheet" type="text/css" href="/css/ion.rangeSlider.skinNice.css" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/help.css" />
-	<title><?php echo $title; ?></title>
+	<title><?php echo $config['title']; ?></title>
 </head>
 <body>
 	<div class="bgs">
@@ -82,7 +82,7 @@
 								</ul>
 							</div>
 							<input type="hidden" id="dataWebserviceId" name="data[WebserviceId]">
-							<input type="hidden" id="dataRedirectUrl" name="data[RedirectUrl]" value="<?php echo 'http://' . $_SERVER['SERVER_NAME']; ?>">
+							<input type="hidden" id="dataRedirectUrl" name="data[RedirectUrl]" value="<?php echo $root; ?>">
 							<input type="hidden" id="dataChargeKind" name="data[ChargeKind]">
 							<input type="hidden" id="dataAccount" name="data[Account]">
 							<input type="hidden" id="dataAmount" name="data[Amount]">
@@ -106,9 +106,9 @@
 	<script type="text/javascript" src="/js/ion.rangeSlider.min.js"></script>
 	<script type="text/javascript" src="/js/charge.js"></script>
 	<script type="text/javascript">
-		var WebserviceID = <?php echo '"' . $webserviceID . '"'; ?>;
-		var DefaultOperator = <?php echo '"' . $defaultOperator . '"'; ?>;
-		var DefaultChargeKind = <?php echo '"' . $defaultChargeKind . '"'; ?>;
+		var WebserviceID = <?php echo '"' . $config['webserviceID'] . '"'; ?>;
+		var DefaultOperator = <?php echo '"' . $config['defaultOperator'] . '"'; ?>;
+		var DefaultChargeKind = <?php echo '"' . $config['defaultChargeKind'] . '"'; ?>;
 	</script>
 </body>
 </html>
