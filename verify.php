@@ -32,7 +32,6 @@
 					} elseif ($result['Type'] == 'TAL') {
 						$type = 'تالیا';
 					}
-					
 					if (array_key_exists('Serial', $result)) {
 						$registerPinCode = '';
 						if (in_array($result['Type'], array('MCI', 'TAL'))) {
@@ -41,114 +40,176 @@
 							$registerPinCode = '#رمزشارژ*141*';
 						}
 			?>
-						<div id="left">
-							<div class="success pin"></div>
-							<div id="description"><p>اکنون با وارد کردن کد شارژ از طریق صفحه کلید گوشی، تلفن همراه خود را شارژ نمایید.</p></div>
+						<div class="right">
+							<div class="panel pink">
+								<div class="panel-header">
+									<div class="arrow left"></div>
+									<p class="step number"></p>
+									<p class="step title"></p>
+									<p class="step description"></p>
+								</div>
+								<div class="panel-body">
+									<p style="margin-top: 10px; text-align: center;">از خرید شما متشکریم.</p>
+									<table>
+										<tbody>
+											<tr>
+												<td>تاریخ</td>
+												<td><?php echo $result['Date']; ?></td>
+											</tr>
+											<tr>
+												<td>مبلغ کارت شارژ</td>
+												<td><?php echo $result['Amount'] . ' تومان'; ?></td>
+											</tr>
+											<tr>
+												<td>اپراتور کارت شارژ</td>
+												<td><?php echo $type; ?></td>
+											</tr>
+											<tr>
+												<td>رمز شارژ</td>
+												<td><?php echo $result['Pin']; ?></td>
+											</tr>
+											<tr>
+												<td>کد ورود شارژ</td>
+												<td><?php echo $registerPinCode; ?></td>
+											</tr>
+											<tr>
+												<td>سریال کارت شارژ</td>
+												<td><?php echo $result['Serial']; ?></td>
+											</tr>
+											<tr>
+												<td>کد پیگیری</td>
+												<td><?php echo $result['RefId']; ?></td>
+											</tr>
+											<tr>
+												<td>کد ثبت</td>
+												<td><?php echo $result['TranId']; ?></td>
+											</tr>
+										</tbody>
+									</table>
+									<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
+								</div>
+							</div>
 						</div>
-						<div id="content" style="margin: 50px auto!important;">
-							<p>از خرید شما متشکریم.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td>تاریخ</td>
-										<td><?php echo $result['Date']; ?></td>
-									</tr>
-									<tr>
-										<td>مبلغ کارت شارژ</td>
-										<td><?php echo $result['Amount'] . ' تومان'; ?></td>
-									</tr>
-									<tr>
-										<td>اپراتور کارت شارژ</td>
-										<td><?php echo $type; ?></td>
-									</tr>
-									<tr>
-										<td>رمز شارژ</td>
-										<td><?php echo $result['Pin']; ?></td>
-									</tr>
-									<tr>
-										<td>کد ورود شارژ</td>
-										<td><?php echo $registerPinCode; ?></td>
-									</tr>
-									<tr>
-										<td>سریال کارت شارژ</td>
-										<td><?php echo $result['Serial']; ?></td>
-									</tr>
-									<tr>
-										<td>کد پیگیری</td>
-										<td><?php echo $result['RefId']; ?></td>
-									</tr>
-									<tr>
-										<td>کد ثبت</td>
-										<td><?php echo $result['TranId']; ?></td>
-									</tr>
-								</tbody>
-							</table>
-							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
+						<div class="center">
+							<i class="timeline"></i>
+							<i class="time-bullet pink" style="top:112px;"></i>
+							<i class="time-bullet blue" style="top:312px;"></i>
 						</div>
-			<?php
-					} else {
-			?>
-						<div id="left">
-							<div class="success topup"></div>
-							<div id="description"><p>به زودی خط شما به صورت اتوماتیک شارژ می شود.</p></div>
+						<div class="left">
+							<div id="info" class="panel blue">
+								<div class="panel-header">
+									<div class="arrow right"></div>
+									<p class="step number"></p>
+									<p class="step title"></p>
+									<p class="step description"></p>
+								</div>
+								<div class="panel-body">
+									<div class="success pin"></div>
+									<div id="description"><p>اکنون با وارد کردن کد شارژ از طریق صفحه کلید گوشی، تلفن همراه خود را شارژ نمایید.</p></div>
+								</div>
+							</div>
 						</div>
-						<div id="content" style="margin: 50px auto!important;">
-							<p>از خرید شما متشکریم.</p>
-							<table>
-								<tbody>
-									<tr>
-										<td>تاریخ</td>
-										<td><?php echo $result['Date']; ?></td>
-									</tr>
-									<tr>
-										<td>مبلغ شارژ</td>
-										<td><?php echo $result['Amount'] . ' تومان'; ?></td>
-									</tr>
-									<tr>
-										<td>اپراتور شارژ</td>
-										<td><?php echo $type; ?></td>
-									</tr>
-									<tr>
-										<td>شماره تلفن همراه</td>
-										<td><?php echo $result['Cell']; ?></td>
-									</tr>
-									<tr>
-										<td>کد پیگیری</td>
-										<td><?php echo $result['RefId']; ?></td>
-									</tr>
-									<tr>
-										<td>کد ثبت</td>
-										<td><?php echo $result['TranId']; ?></td>
-									</tr>
-								</tbody>
-							</table>
-							<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
+			<?php   } else { ?>
+						<div class="right">
+							<div class="panel pink">
+								<div class="panel-header">
+									<div class="arrow left"></div>
+									<p class="step number"></p>
+									<p class="step title"></p>
+									<p class="step description"></p>
+								</div>
+								<div class="panel-body">
+									<p style="margin-top: 10px; text-align: center;">از خرید شما متشکریم.</p>
+									<table>
+										<tbody>
+											<tr>
+												<td>تاریخ</td>
+												<td><?php echo $result['Date']; ?></td>
+											</tr>
+											<tr>
+												<td>مبلغ شارژ</td>
+												<td><?php echo $result['Amount'] . ' تومان'; ?></td>
+											</tr>
+											<tr>
+												<td>اپراتور شارژ</td>
+												<td><?php echo $type; ?></td>
+											</tr>
+											<tr>
+												<td>شماره تلفن همراه</td>
+												<td><?php echo $result['Cell']; ?></td>
+											</tr>
+											<tr>
+												<td>کد پیگیری</td>
+												<td><?php echo $result['RefId']; ?></td>
+											</tr>
+											<tr>
+												<td>کد ثبت</td>
+												<td><?php echo $result['TranId']; ?></td>
+											</tr>
+										</tbody>
+									</table>
+									<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
+								</div>
+							</div>
 						</div>
-			<?php	
-					}
-				} else {
-			?>
+						<div class="center">
+							<i class="timeline"></i>
+							<i class="time-bullet pink" style="top:112px;"></i>
+							<i class="time-bullet blue" style="top:312px;"></i>
+						</div>
+						<div class="left">
+							<div id="info" class="panel blue">
+								<div class="panel-header">
+									<div class="arrow right"></div>
+									<p class="step number"></p>
+									<p class="step title"></p>
+									<p class="step description"></p>
+								</div>
+								<div class="panel-body">
+									<div class="success topup"></div>
+									<div id="description"><p>به زودی خط شما به صورت اتوماتیک شارژ می شود.</p></div>
+								</div>
+							</div>
+						</div>
+			<?php	}
+				} else { ?>
 					<div class="failed">
-						<div class="logo"></div>
-						<div class="explanation">
-							<h1>تراکنش ناموفق بود.</h1>
-							<?php
-								if ($result['Status'] == -11) {
-									echo '<h2>خطا در اطلاعات دریافتی</h2>';
-								} elseif ($result['Status'] == -22) {
-									echo '<h2>درگاه بانکی نامعتبر</h2>';
-								} elseif ($result['Status'] == -33) {
-									echo '<h2>لغو درخواست توسط مشتری</h2>';
-								} elseif ($result['Status'] == -44) {
-									echo '<h2>شماره درخواست نامعتبر</h2>';
-								} elseif ($result['Status'] == -55) {
-									echo '<h2>تراکنش تائید نشد</h2>';
-								}
-							?>
-							<p>چنانچه وجه از حساب شما کسر شده است، طی 72 ساعت کاری آینده از طرف بانک وجه به حساب شما باز می گردد.</p>
+						<div class="right">
+							<div class="panel pink">
+								<div class="panel-header">
+									<div class="arrow left"></div>
+									<p class="step number"></p>
+									<p class="step title"></p>
+									<p class="step description"></p>
+								</div>
+								<div class="panel-body">
+									<div class="logo"></div>
+									<div class="explanation">
+										<h1>تراکنش ناموفق بود.</h1>
+										<?php
+											if ($result['Status'] == -11) {
+												echo '<h2>خطا در اطلاعات دریافتی</h2>';
+											} elseif ($result['Status'] == -22) {
+												echo '<h2>درگاه بانکی نامعتبر</h2>';
+											} elseif ($result['Status'] == -33) {
+												echo '<h2>لغو درخواست توسط مشتری</h2>';
+											} elseif ($result['Status'] == -44) {
+												echo '<h2>شماره درخواست نامعتبر</h2>';
+											} elseif ($result['Status'] == -55) {
+												echo '<h2>تراکنش تائید نشد</h2>';
+											}
+										?>
+										<p>چنانچه وجه از حساب شما کسر شده است، طی 72 ساعت کاری آینده از طرف بانک وجه به حساب شما باز می گردد.</p>
+									</div>
+									<div class="clear"></div>
+									<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
+								</div>
+							</div>
 						</div>
-						<a class="mainpage" href="<?php echo $root; ?>">صفحه اصلی فروشگاه</a>
-						<div class="clear"></div>
+						<div class="center">
+							<i class="timeline"></i>
+							<i class="time-bullet pink" style="top:112px;"></i>
+						</div>
 					</div>	
 			<?php
 				}
