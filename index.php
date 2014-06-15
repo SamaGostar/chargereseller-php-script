@@ -118,7 +118,7 @@
 									<input type="checkbox" value="1" id="magiccharge" name="data[Magic]">
 								</div>
 								<input type="hidden" id="dataWebserviceId" name="data[WebserviceId]">
-								<input type="hidden" id="dataRedirectUrl" name="data[RedirectUrl]">
+								<input type="hidden" id="dataRedirectUrl" value="<?php echo $root; ?>" name="data[RedirectUrl]">
 								<input type="hidden" id="dataChargeKind" name="data[ChargeKind]">
 								<input type="hidden" id="dataAccount" name="data[Account]">
 								<input type="hidden" id="dataAmount" name="data[Amount]">
