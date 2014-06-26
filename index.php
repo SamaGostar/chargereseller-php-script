@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
 	<meta name="description" content="<?php echo $config['description']; ?>" />
 	<meta name="keywords" content="<?php echo $config['keywords']; ?>" />
-	<link href="/css/favicon.ico" type="image/x-icon" rel="icon" />
-	<link rel="stylesheet" type="text/css" href="/css/jquery.qtip.css" />
-	<link rel="stylesheet" type="text/css" href="/css/ion.rangeSlider.css" />
-	<link rel="stylesheet" type="text/css" href="/css/ion.rangeSlider.skinNice.css" />
-	<link rel="stylesheet" type="text/css" href="/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/css/help.css" />
+	<link type="image/x-icon" rel="icon" href="css/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.css" />
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css" />
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinNice.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/help.css" />
 	<title><?php echo $config['title']; ?></title>
 </head>
 <body>
@@ -95,10 +95,10 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-	<script type="text/javascript" src="/js/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.qtip.min.js"></script>
-	<script type="text/javascript" src="/js/ion.rangeSlider.min.js"></script>
-	<script type="text/javascript" src="/js/charge.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+	<script type="text/javascript" src="js/charge.js"></script>
 	<script type="text/javascript">
 		var WebserviceID = <?php echo '"' . $config['webserviceID'] . '"'; ?>;
 		var DefaultOperator = <?php echo '"' . $config['defaultOperator'] . '"'; ?>;
