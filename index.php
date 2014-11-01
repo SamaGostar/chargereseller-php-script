@@ -1,108 +1,1 @@
-<?php include 'config.php'; ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-	<meta name="description" content="<?php echo $config['description']; ?>" />
-	<meta name="keywords" content="<?php echo $config['keywords']; ?>" />
-	<link type="image/x-icon" rel="icon" href="css/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="css/jquery.qtip.css" />
-	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css" />
-	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinNice.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/help.css" />
-	<title><?php echo $config['title']; ?></title>
-</head>
-<body>
-	<div class="bgs">
-		<div class="menu">
-			<span class="support">پشتیبانی</span>
-			<span class="help">راهنما</span>
-		</div>
-		<div class="container">
-			<div class="operators">
-				<div data-type="MTN" class="operator MTN"><i></i></div>
-				<div data-type="MCI" class="operator MCI"><i></i></div>
-				<div data-type="RTL" class="operator RTL"><i></i></div>
-				<div data-type="TAL" class="operator TAL"><i></i></div>
-			</div>
-			<div id="left">
-				<div id="logo" class="ChangeType"></div>
-				<div id="desc"><h1></h1><p></p></div>
-			</div>
-			<div id="content">
-				<form accept-charset="utf-8" method="post" id="chargeform" action="http://chargereseller.com/services/EasyCharge/">
-					<fieldset>
-						<div class="input text required account">
-							<input id="dataAccountTemp" class="input-large" type="text" value="" maxlength="11" name="data[AccountTemp]">
-						</div>
-						<div id="AmountTemp" class="input text required amount">
-							<input type="text" id="dataAmountTemp" name="data[AmountTemp]" title="مبلغ به تومان" class="eng">
-						</div>
-						<div id="AmountTopUpMTNTemp" class="input text required amount">
-							<input type="text" id="dataAmountTopUpMTNTemp" name="data[AmountMTNTemp]" title="مبلغ به تومان" class="eng">
-						</div>
-						<div class="input text">
-							<input id="EmailInput" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com" name="data[Email]">
-						</div>
-						<div class="Magiccharge">
-							<label for="magiccharge">شارژ شگفت انگیز برایم ثبت شود : </label>
-							<input type="checkbox" value="1" id="magiccharge" name="data[Magic]">
-						</div>
-						<div class="banks">
-							<p>بانک صادر کننده کارت شما :<i></i></p>
-							<ul>
-								<li id="Saman" class="bank-Saman"><i>سامان</i></li>
-								<li id="EnBank" class="bank-EnBank"><i>اقتصاد نوین</i></li>
-								<li id="Mellat" class="bank-Mellat"><i>ملت</i></li>
-								<li id="AgriBank" class="bank-AgriBank"><i>کشاورزی</i></li>
-								<li id="Sina" class="bank-Sina"><i>سینا</i></li>
-								<li id="Parsian" class="bank-Parsian"><i>پارسيان</i></li>
-								<li id="SanatMadan" class="bank-SanatMadan"><i>صنعت و معدن</i></li>
-								<li id="Pasargad" class="bank-Pasargad"><i>پاسارگاد</i></li>
-								<li id="Melli" class="bank-Melli"><i>ملی</i></li>
-								<li id="Saderat" class="bank-Saderat"><i>صادرات</i></li>
-								<li id="PostBank" class="bank-PostBank"><i>پست بانک</i></li>
-								<li id="Tejarat" class="bank-Tejarat"><i>تجارت</i></li>
-								<li id="ToseTavon" class="bank-ToseTavon"><i>توسعه و تعاون</i></li>
-								<li id="Ansar" class="bank-Ansar"><i>انصار</i></li>
-								<li id="Refah" class="bank-Refah"><i>رفاه</i></li>
-								<li id="Sepah" class="bank-Sepah"><i>سپه</i></li>
-								<li id="Sarmayeh" class="bank-Sarmayeh"><i>سرمایه</i></li>
-								<li id="Ayandeh" class="bank-Ayandeh"><i>آینده</i></li>
-								<li id="KarAfarin" class="bank-KarAfarin"><i>کار آفرین</i></li>
-								<li id="Maskan" class="bank-Maskan"><i>مسکن</i></li>
-								<li id="Mehr" class="bank-Mehr"><i>مهر</i></li>
-								<li id="Dey" class="bank-Dey"><i>دی</i></li>
-								<li id="CityBank" class="bank-CityBank"><i>شهر</i></li>
-								<li id="Zarinpal" class="bank-Zarinpal"><i>زرین پال</i></li>
-							</ul>
-						</div>
-						<input type="hidden" id="dataWebserviceId" name="data[WebserviceId]">
-						<input type="hidden" id="dataRedirectUrl" value="<?php echo $root; ?>" name="data[RedirectUrl]">
-						<input type="hidden" id="dataChargeKind" name="data[ChargeKind]">
-						<input type="hidden" id="dataAccount" name="data[Account]">
-						<input type="hidden" id="dataAmount" name="data[Amount]">
-						<input type="hidden" id="dataType" name="data[Type]">
-						<input type="hidden" id="dataIssuer" name="data[Issuer]">
-						<input type="hidden" id="dataRedirectToPage" name="data[RedirectToPage]" value="true">
-					</fieldset>
-					<div class="submit">
-						<input type="submit" value="پــرداخــت">
-					</div>
-				</form>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
-	<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
-	<script type="text/javascript" src="js/charge.js"></script>
-	<script type="text/javascript">
-		var WebserviceID = <?php echo '"' . $config['webserviceID'] . '"'; ?>;
-		var DefaultOperator = <?php echo '"' . $config['defaultOperator'] . '"'; ?>;
-		var DefaultChargeKind = <?php echo '"' . $config['defaultChargeKind'] . '"'; ?>;
-	</script>
-</body>
-</html>
+<?php include 'config.php'; ?><!DOCTYPE html><html>	<head>		<meta charset="UTF-8">		<meta name="description" content="<?php echo $config['description']; ?>" />		<meta name="keywords" content="<?php echo $config['keywords']; ?>" />		<link href="css/favicon.ico" type="image/x-icon" rel="icon" />		<link rel="stylesheet" type="text/css" href="css/tinycircleslider.css" />		<link rel="stylesheet" type="text/css" href="css/jquery.qtip.css" />		<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css" />		<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinNice.css" />		<link rel="stylesheet" type="text/css" href="css/style.css" />		<link rel="stylesheet" type="text/css" href="css/help.css" />		<title><?php echo $config['title']; ?></title>	</head><body>	<div class="notify">		<p class="description">جهت انتخاب خدمات روی آیکون های کوچک دور دایره کلیک نمایید.</p>	</div>	<div class="bgs">		<div class="menu">			<span class="support">پشتیبانی</span>			<span class="help">راهنما</span>		</div>		<div class="container">			<div class="operators">				<div data-type="MTN" class="operator MTN"><i></i></div>				<div data-type="MCI" class="operator MCI"><i></i></div>				<div data-type="RTL" class="operator RTL"><i></i></div>				<div data-type="TAL" class="operator TAL"><i></i></div>			</div>			<div id="left">				<div id="logo-container">					<div id="logo">						<div class="viewport">							<ul class="overview">								<li><img src="img/tinycircleslider/recharge.png" alt="شارژ مستقیم"/></li>								<li><img src="img/tinycircleslider/pin.png" alt="کارت شارژ"/></li>								<li><img src="img/tinycircleslider/wimax.png" alt="شارژ وایمکس"/></li>								<li><img src="img/tinycircleslider/bill.png" alt="پرداخت قبض"/></li>								<li><img src="img/tinycircleslider/gift-card.png" alt="گیفت کارت"/></li>								<li><img src="img/tinycircleslider/traffic.png" alt="مجوز عبور از طرح ترافیک"/></li>								<li><img src="img/tinycircleslider/antivirus.png" alt="آنتی ویروس"/></li>							</ul>						</div>						<div class="dot"></div>						<div class="overlay"></div>						<div class="thumb"></div>					</div>				</div>				<div id="desc"><h1></h1><p></p></div>			</div>			<div id="content">				<form accept-charset="utf-8" method="post" id="chargeform" action="http://www.chargereseller.com/services/EasyCharge/">					<fieldset>						<div class="charge">							<div class="input text required account">								<input id="dataAccountTemp" class="input-large cellphone" type="text" value="" maxlength="11" name="data[AccountTemp]">							</div>							<div id="AmountTemp" class="input text required amount">								<input type="text" id="dataAmountTemp" name="data[AmountTemp]" title="مبلغ به تومان" class="eng">							</div>							<div id="AmountTopUpMTNTemp" class="input text required amount">								<input type="text" id="dataAmountTopUpMTNTemp" name="data[AmountMTNTemp]" title="مبلغ به تومان" class="eng">							</div>							<div class="input text counter">								<div class="input text required count">									<input type="text" id="count" class="eng">								</div>								<div class="amount-container">									<span class="amount-title">مبلغ</span>									<span class="amount-value"></span>									<span class="amount-unit">تومان</span>								</div>								<div class="clear"></div>							</div>							<div class="input text email">								<input id="EmailInput" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com">							</div>							<div class="Magiccharge">								<label for="magiccharge">شارژ شگفت انگیز </label>								<input type="checkbox" value="1" id="magiccharge" name="data[Magic]">							</div>						</div>						<div class="Bill">							<div class="check">								<div class="input text required billId">									<input id="BillId" class="input-large" type="text" placeholder="شناسه قبض" value="" maxlength="13" name="data[BillId]">								</div>								<div class="input text required paymentId">									<input id="PaymentId" class="input-large" type="text" placeholder="شناسه پرداخت" value="" maxlength="13" name="data[PaymentId]">								</div>								<div class="input text email">									<input id="email" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com">								</div>								<div class="input text required account">									<input class="input-large cellphone" type="text" value="" placeholder="شماره موبایل" maxlength="11">								</div>								<div>									<input id="CheckBill" type="button" class="check" value="بررسی">								</div>							</div>							<div class="verify">								<table id="bill-info">									<tbody>										<tr>											<td>نوع قبض</td>											<td><span id="type" class="bill"></span><span id="type-title"></span></td>										</tr>										<tr>											<td>مبلغ قبض</td>											<td><span id="amount"></span> ریال</td>										</tr>										<tr>											<td>شناسه قبض</td>											<td><span id="bill-id"></span></td>										</tr>										<tr>											<td>شناسه پرداخت</td>											<td><span id="payment-id"></span></td>										</tr>										<tr>											<td>ایمیل</td>											<td><span id="email"></span></td>										</tr>										<tr>											<td>شماره موبایل</td>											<td><span id="cellphone"></span></td>										</tr>									</tbody>								</table>							</div>						</div>						<div class="GiftCard">							<div class="operators">								<div data-type="GooglePlay" class="operator GiftCard GooglePlay"><i></i></div>								<div data-type="Microsoft" class="operator GiftCard Microsoft"><i></i></div>								<div data-type="iTunes" class="operator GiftCard iTunes"><i></i></div>								<div data-type="Amazon" class="operator GiftCard Amazon"><i></i></div>								<div data-type="XBox" class="operator GiftCard XBox"><i></i></div>								<div data-type="PlayStation" class="operator GiftCard PlayStation"><i></i></div>								<div data-type="PlayStationPlus" class="operator GiftCard PlayStationPlus"><i></i></div>							</div>							<div class="buy">								<div class="info">									<div id="operator"></div>									<div class="title"></div>									<div class="description"></div>									<div class="back-button">بازگشت</div>								</div>								<div class="input text giftcard-types">									<select id="GiftCardTypes" class="input-large" name="data[ProductId]"></select>									<input type="hidden" id="UnitAmount" value="0">								</div>								<div class="input text">									<div class="input text required count">										<input type="text" id="count" class="eng">									</div>									<div class="amount-container">										<span class="amount-title">مبلغ</span>										<span class="amount-value"></span>										<span class="amount-unit">تومان</span>									</div>									<div class="clear"></div>								</div>								<div class="input text email">									<input id="email" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com"">								</div>								<div class="input text required account">									<input class="input-large cellphone" type="text" value="" placeholder="شماره موبایل" maxlength="11">								</div>							</div>						</div>						<div class="TrafficCard">							<div class="input text trafficcard-types">								<select id="TrafficCardTypes" class="input-large" name="data[ProductId]"></select>								<input type="hidden" id="UnitAmount" value="0">							</div>							<div class="input text">								<div class="input text required count">									<input type="text" id="count" class="eng">								</div>								<div class="amount-container">									<span class="amount-title">مبلغ</span>									<span class="amount-value"></span>									<span class="amount-unit">تومان</span>								</div>								<div class="clear"></div>							</div>							<div class="input text email">								<input id="email" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com"">							</div>							<div class="input text required account">								<input class="input-large cellphone" type="text" value="" placeholder="شماره موبایل" maxlength="11">							</div>						</div>						<div class="Antivirus">							<div class="operators">								<div data-type="Eset" class="operator Antivirus Eset"><i></i></div>								<div data-type="BitDefender" class="operator Antivirus BitDefender"><i></i></div>								<div data-type="Kaspersky" class="operator Antivirus Kaspersky"><i></i></div>								<div data-type="Norton" class="operator Antivirus Norton"><i></i></div>							</div>							<div class="buy">								<div class="info">									<div id="operator"></div>									<div class="title"></div>									<div class="description"></div>									<div class="back-button">بازگشت</div>								</div>								<div class="input text antivirus-types">									<select id="AntivirusTypes" class="input-large" name="data[ProductId]"></select>									<input type="hidden" id="UnitAmount" value="0">								</div>								<div class="input text">									<div class="input text required count">										<input type="text" id="count" class="eng">									</div>									<div class="amount-container">										<span class="amount-title">مبلغ</span>										<span class="amount-value"></span>										<span class="amount-unit">تومان</span>									</div>								</div>								<div class="input text email">									<input id="email" class="input-large" type="email" maxlength="50" value="" title="آدرس ایمیل را به شکل صحیح بنویسید!" rel="tooltip" placeholder="you@domain.com"">								</div>								<div class="input text required account">									<input class="input-large cellphone" type="text" value="" placeholder="شماره موبایل" maxlength="11">								</div>							</div>						</div>						<div class="payment-gateways">							<p>درگاه پرداخت: <i></i></p>							<ul>								<li id="Parsian" class="bank-Parsian" data-tooltip="پارسیان"></li>								<li id="Mellat" class="bank-Mellat" data-tooltip="ملت"></li>								<li id="Saman" class="bank-Saman" data-tooltip="سامان"></li>								<li id="Melli" class="bank-Melli" data-tooltip="ملی"></li>								<li id="Fanava" class="bank-Fanava" data-tooltip="فن آوا"></li>								<li id="Zarinpal" class="bank-Zarinpal" data-tooltip="زرین پال"></li>							</ul>							<p class="caution">خرید با کلیه کارت های بانکی عضو شبکه شتاب امکان پذیر می باشد.</p>						</div>						<input type="hidden" id="dataWebserviceId" name="data[WebserviceId]">						<input type="hidden" id="dataRedirectUrl" name="data[RedirectUrl]" value="<?php echo $root; ?>">						<input type="hidden" id="dataChargeKind" name="data[ChargeKind]">						<input type="hidden" id="dataCellphone" name="data[Cellphone]">						<input type="hidden" id="dataAmount" name="data[Amount]">						<input type="hidden" id="dataCount" name="data[Count]">						<input type="hidden" id="dataEmail" name="data[Email]">						<input type="hidden" id="dataType" name="data[Type]">						<input type="hidden" id="dataIssuer" name="data[Issuer]">						<input type="hidden" id="dataRedirectToPage" name="data[RedirectToPage]" value="true">						<input type="hidden" id="dataRedirectToPage" name="data[ScriptVersion]" value="2">					</fieldset>					<div class="submit">						<input type="submit" value="پــرداخــت">					</div>				</form>			</div>			<div class="clear"></div>		</div>	</div>	<a href="/application.php" class="application"><img src="/img/DownloadAndroidApplication.gif" title="دانلود اپلیکیشن اندروید خرید شارژ و پرداخت قبوض" alt="اپلیکیشن اندروید خرید شارژ و پرداخت قبوض"/></a>	<div id="payment-process"></div>	<div class="cover"></div>	<div class="connecting"><p></p></div>	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>	<script type="text/javascript" src="js/jquery.qtip.min.js"></script>	<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>	<script type="text/javascript" src="js/jquery.tinycircleslider.js"></script>	<script type="text/javascript" src="js/charge.js"></script>	<script type="text/javascript">		var WebserviceID = <?php echo '"' . $config['webserviceID'] . '"'; ?>;	</script></body></html>
