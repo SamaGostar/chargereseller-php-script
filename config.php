@@ -1,11 +1,9 @@
 <?php
 $config = array(
-	'title' => 'فروشگاه شارژ',
+	'title' => 'اتوشارژ 24',
 	'description' => 'شارژ آسان تلفن همراه',
 	'keywords' => 'شارژ آسان تلفن همراه,شارژ موبایل, فروش شارژ,شارژ ایرانسل,شارژ همراه اول, رایتل,تالیا,کارت شارژ,شارژ مستقیم',
-	'webserviceID' => 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX',
-	'defaultOperator' => 'MTN',
-	'defaultChargeKind' => 'PIN'
+	'webserviceID' => 'c5552b54-9a68-11e3-ae33-000c295854db'
 );
 
 $slashPos = strrpos($_SERVER['SCRIPT_NAME'], '/');
